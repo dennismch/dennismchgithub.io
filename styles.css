@@ -196,6 +196,7 @@ ul {
     color: var(--accent1);
     position: absolute;
     left: 0;
+    display: none;
 }
 
 /* About Section */
