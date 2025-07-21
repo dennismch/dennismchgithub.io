@@ -356,6 +356,25 @@ ul {
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.9rem;
 }
+/* Reviews Section */
+.reviews {
+    background-color: white;
+    text-align: center;
+}
+
+.reviews h2 {
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
