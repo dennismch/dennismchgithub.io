@@ -1,34 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to dennismch.github.io!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f8f9fa; color: #222; }
-    header { margin-bottom: 2rem; }
-    h1 { color: #2d72d9; }
-    main { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
-    footer { margin-top: 2rem; color: #777; font-size: 0.95rem; }
-    a { color: #2d72d9; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientious Cleaners - Professional Cleaning Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS will go here */
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to dennismch.github.io!</h1>
-    <p>This is your personal site, powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
-  </header>
-  <main>
-    <h2>Getting Started</h2>
-    <ul>
-      <li>Edit <code>index.html</code> to update your homepage content.</li>
-      <li>Add more HTML or Markdown files for additional pages.</li>
-      <li>Check out the <a href="https://docs.github.com/pages">GitHub Pages documentation</a> for advanced features.</li>
-    </ul>
-    <p>Happy building! 🚀</p>
-  </main>
-  <footer>
-    &copy; 2025 dennismch. Hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  </footer>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-main">Conscientious</span>
+                <span class="logo-sub">Cleaners</span>
+            </div>
+            <div class="phone">
+                <i class="fas fa-phone"></i> (555) 123-4567
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with Hero Image -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>A Clean Home is a Happy Home</h1>
+            <p class="hero-quote">"We don't just clean, we care for your space like it's our own."</p>
+            <a href="#contact" class="cta-button">Call for a Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Cleaning Frequency</h3>
+                    <ul>
+                        <li>Weekly</li>
+                        <li>Bi-weekly</li>
+                        <li>Monthly</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category">
+                    <h3>Service Types</h3>
+                    <ul>
+                        <li>Residential services</li>
+                        <li>Commercial</li>
+                        <li>Construction clean up</li>
+                        <li>Office clean</li>
+                        <li>Move-in move-out clean</li>
+                        <li>Spring-clean</li>
+                        <li>Clean & organize your closet</li>
+                        <li>Clean & Organize your Garage, Basement</li>
+                        <li>Deep-clean</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li>Eco-Friendly Cleaning Supplies</li>
+                        <li>We supply eco-friendly, green cleaning supplies</li>
+                        <li>Reasonable Rates</li>
+                        <li>I don't clean for clients with cats and dogs (NO SNAKES)</li>
+                        <li>For move-in/move-out cleaning: Places must be empty - we don't move furniture or boxes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Are you tired of changing housekeepers?</p>
+                    <p>Are you looking for a trustworthy professional who shows up on time and is organized with an eye for detail?</p>
+                    <p>Then, Conscientious Cleaners is the professional cleaning service for you.</p>
+                    <p>Our intention is to work with our clients for years by building a bond with mutual respect.</p>
+                    <p>Whether your needs are one time, weekly, bi-weekly or monthly we have you covered. Available to clean up after events on weekends.</p>
+                    <p>Call us today to see how Conscientious Cleaners can help make your life easier!</p>
+                    
+                    <div class="expertise">
+                        <h3>Our Expertise</h3>
+                        <ul>
+                            <li>Over 35 years expertise</li>
+                            <li>Free estimates</li>
+                            <li>Outstanding Quality Service</li>
+                            <li>Glowing References</li>
+                            <li>Satisfaction Guaranteed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600584449046-c0b2297f8bb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean home">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="gallery-tabs">
+                <button class="tab-button active" data-tab="all">All</button>
+                <button class="tab-button" data-tab="residential">Residential</button>
+                <button class="tab-button" data-tab="commercial">Commercial</button>
+                <button class="tab-button" data-tab="office">Office</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item residential">
+                    <img src="https://images.unsplash.com/photo-1583845112203-4541f1c9c7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean kitchen">
+                </div>
+                <div class="gallery-item commercial">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean office">
+                </div>
+                <div class="gallery-item residential">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean bathroom">
+                </div>
+                <div class="gallery-item office">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Office cleaning">
+                </div>
+                <div class="gallery-item commercial">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Warehouse cleaning">
+                </div>
+                <div class="gallery-item residential">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Clean living room">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Conscientious Cleaners</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Conscientious Cleaners. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab functionality for gallery
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tab = button.dataset.tab;
+                
+                // Update active tab
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+                
+                // Filter gallery items
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (tab === 'all' || item.classList.contains(tab)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
