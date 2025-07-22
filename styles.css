@@ -405,7 +405,7 @@ ul {
     }
 }
 
-/* Update your lightbox styles */
+/* Lightbox Styles */
 .lightbox {
     display: none;
     position: fixed;
@@ -423,23 +423,16 @@ ul {
 }
 
 .lightbox-content {
-    /* Remove height: 100% if it exists */
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    height: 100%;
     padding: 20px;
-    max-width: 90vw; /* Limits width on larger screens */
-    max-height: 90vh; /* Limits height */
 }
 
 .lightbox-img {
-    max-width: 100%;
-    max-height: 80vh; /* Slightly less than viewport height */
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
-    /* Center the image within its container */
-    margin: auto;
-    display: block;
 }
 
 .close-lightbox {
@@ -450,7 +443,11 @@ ul {
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10000; /* Ensure it's above the image */
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    color: var(--accent3);
 }
 
 .gallery-item {
