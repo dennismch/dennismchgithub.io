@@ -416,12 +416,15 @@ ul {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     overflow: auto;
+    /* Add these for perfect centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox-content {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
     padding: 20px;
 }
