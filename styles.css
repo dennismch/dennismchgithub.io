@@ -407,7 +407,7 @@ ul {
 
 /* Lightbox Styles */
 .lightbox {
-    display: none;
+    /* Remove display: flex from here */
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -416,10 +416,15 @@ ul {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     overflow: auto;
-    /* Add these for perfect centering */
-    display: flex;
+    /* Add these only when active */
+    display: none; /* Start hidden */
     justify-content: center;
     align-items: center;
+}
+
+/* Add this new class */
+.lightbox.active {
+    display: flex;
 }
 
 .lightbox-content {

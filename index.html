@@ -142,7 +142,7 @@
     </section>
 
     <!-- Lightbox Container -->
-    <div id="lightbox" class="lightbox">
+    <div id="lightbox" class="lightbox" hidden>
         <span class="close-lightbox">&times;</span>
         <div class="lightbox-content">
             <img class="lightbox-img" src="" alt="Enlarged view">
@@ -193,41 +193,40 @@
             item.addEventListener('click', function() {
                 const lightbox = document.getElementById('lightbox');
                 const lightboxImg = document.querySelector('.lightbox-img');
+                
+                // Set image source
                 lightboxImg.src = this.querySelector('img').src;
-                lightbox.style.display = 'flex';
+                
+                // Show lightbox properly
+                lightbox.hidden = false;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Preload image
+                lightboxImg.style.opacity = '0';
+                lightboxImg.onload = function() {
+                    lightboxImg.style.opacity = '1';
+                };
             });
         });
 
-        // Close lightbox
-        document.querySelector('.close-lightbox').addEventListener('click', function() {
-            document.getElementById('lightbox').style.display = 'none';
-        });
+        // Close lightbox functions
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            lightbox.hidden = true;
+            document.body.style.overflow = 'auto';
+        }
 
-        // Close when clicking outside image
+        document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
+
+        // Close when clicking outside or pressing ESC
         document.querySelector('.lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
+            if (e.target === this) closeLightbox();
         });
 
-        // Tab switching functionality (keep your existing tab code)
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const tab = button.dataset.tab;
-                
-                document.querySelectorAll('.tab-button').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                button.classList.add('active');
-                
-                document.querySelectorAll('.gallery-item').forEach(item => {
-                    if (tab === 'all' || item.classList.contains(tab)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
